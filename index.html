@@ -1,1 +1,216 @@
-<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="chrome=1"><meta name="viewport" content="width=1104,initial-scale=0.3,maximum-scale=1"><title>Creative Cloud Desktop</title><link rel="preload font" href="./fonts/AdobeClean-LightIt.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-It.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-Bold.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-Light.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-Regular.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-ExtraBold.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-SemiCnIt.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-BoldSemiCnIt.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-SemiCn.otf" as="font"><link rel="preload font" href="./fonts/AdobeClean-BoldSemiCn.otf" as="font"><link href="clean.css" rel="stylesheet"></head><body><div id="root"></div><script src="../resources/legacy/host/libs/json2xml.min.js"></script><script defer="defer" src="index.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptで生成されたページ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #aadecd;
+            color: #333;
+        }
+
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
+        main {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #0a9396;
+            border-bottom: 3px solid #94d2bd;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        ul li a {
+            color: #ee9b00;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #ee9b00;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ca6702;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #005f73;
+            color: white;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            main {
+                padding: 30px 20px;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // headerセクションを生成
+        const header = document.createElement('header');
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Welcome to My Site';
+        const pHeader = document.createElement('p');
+        pHeader.textContent = 'Crafting modern and elegant web experiences.';
+        header.appendChild(h1);
+        header.appendChild(pHeader);
+        document.body.appendChild(header);
+
+        // mainセクションを生成
+        const main = document.createElement('main');
+
+        // About Meセクション
+        const aboutSection = document.createElement('section');
+        const aboutTitle = document.createElement('h2');
+        aboutTitle.textContent = 'About Me';
+        const aboutText = document.createElement('p');
+        aboutText.textContent = "Hi, I'm passionate about web development, focusing on creating clean, efficient, and elegant web designs using HTML, CSS, and JavaScript.";
+        aboutSection.appendChild(aboutTitle);
+        aboutSection.appendChild(aboutText);
+
+        // My Interestsセクション
+        const interestsSection = document.createElement('section');
+        const interestsTitle = document.createElement('h2');
+        interestsTitle.textContent = 'My Interests';
+        const ul = document.createElement('ul');
+        const interests = [
+            { name: 'Web Development', url: 'web-development.html' },
+            { name: 'Reading Books', url: 'reading-books.html' },
+            { name: 'Traveling the World', url: 'traveling-world.html' }
+        ];
+        interests.forEach(interest => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = interest.url;
+            a.textContent = interest.name;
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+        interestsSection.appendChild(interestsTitle);
+        interestsSection.appendChild(ul);
+
+        // Linksセクション
+        const linksSection = document.createElement('section');
+        const linksTitle = document.createElement('h2');
+        linksTitle.textContent = 'Links';
+        const linkParagraph = document.createElement('p');
+        const link = document.createElement('a');
+        link.href = 'https://www.linkedin.com/in/ryota-abe-5a3592bb';
+        link.target = '_blank';
+        link.textContent = 'LinkedIn';
+        linkParagraph.textContent = 'Visit my LinkedIn profile: ';
+        linkParagraph.appendChild(link);
+        linksSection.appendChild(linksTitle);
+        linksSection.appendChild(linkParagraph);
+
+        // Contact Meセクション
+        const contactSection = document.createElement('section');
+        const contactTitle = document.createElement('h2');
+        contactTitle.textContent = 'Contact Me';
+        const button = document.createElement('button');
+        button.textContent = 'Get in Touch';
+        button.addEventListener('click', () => {
+            alert('Thank you for reaching out!');
+        });
+        contactSection.appendChild(contactTitle);
+        contactSection.appendChild(button);
+
+        // 各セクションをmainに追加
+        main.appendChild(aboutSection);
+        main.appendChild(interestsSection);
+        main.appendChild(linksSection);
+        main.appendChild(contactSection);
+
+        // mainセクションをbodyに追加
+        document.body.appendChild(main);
+
+        // footerセクションを生成
+        const footer = document.createElement('footer');
+        const footerText = document.createElement('p');
+        footerText.textContent = '© 2024 My Sample Site. All rights reserved.';
+        footer.appendChild(footerText);
+        document.body.appendChild(footer);
+    </script>
+</body>
+</html>
