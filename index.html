@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScriptで生成されたページ</title>
+    <title>Welcome to My Site</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
@@ -125,92 +125,45 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to My Site</h1>
+        <p>Crafting modern and elegant web experiences.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hi, I'm passionate about web development, focusing on creating clean, efficient, and elegant web designs using HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section>
+            <h2>My Interests</h2>
+            <ul>
+                <li><a href="web-development.html">Web Development</a></li>
+                <li><a href="reading-books.html">Reading Books</a></li>
+                <li><a href="traveling-world.html">Traveling the World</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Links</h2>
+            <p>Visit my LinkedIn profile: <a href="https://www.linkedin.com/in/ryota-abe-5a3592bb" target="_blank">LinkedIn</a></p>
+        </section>
+
+        <section>
+            <h2>Contact Me</h2>
+            <button id="contactBtn">Get in Touch</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 My Sample Site. All rights reserved.</p>
+    </footer>
 
     <script>
-        // headerセクションを生成
-        const header = document.createElement('header');
-        const h1 = document.createElement('h1');
-        h1.textContent = 'Welcome to My Site';
-        const pHeader = document.createElement('p');
-        pHeader.textContent = 'Crafting modern and elegant web experiences.';
-        header.appendChild(h1);
-        header.appendChild(pHeader);
-        document.body.appendChild(header);
-
-        // mainセクションを生成
-        const main = document.createElement('main');
-
-        // About Meセクション
-        const aboutSection = document.createElement('section');
-        const aboutTitle = document.createElement('h2');
-        aboutTitle.textContent = 'About Me';
-        const aboutText = document.createElement('p');
-        aboutText.textContent = "Hi, I'm passionate about web development, focusing on creating clean, efficient, and elegant web designs using HTML, CSS, and JavaScript.";
-        aboutSection.appendChild(aboutTitle);
-        aboutSection.appendChild(aboutText);
-
-        // My Interestsセクション
-        const interestsSection = document.createElement('section');
-        const interestsTitle = document.createElement('h2');
-        interestsTitle.textContent = 'My Interests';
-        const ul = document.createElement('ul');
-        const interests = [
-            { name: 'Web Development', url: 'web-development.html' },
-            { name: 'Reading Books', url: 'reading-books.html' },
-            { name: 'Traveling the World', url: 'traveling-world.html' }
-        ];
-        interests.forEach(interest => {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.href = interest.url;
-            a.textContent = interest.name;
-            li.appendChild(a);
-            ul.appendChild(li);
-        });
-        interestsSection.appendChild(interestsTitle);
-        interestsSection.appendChild(ul);
-
-        // Linksセクション
-        const linksSection = document.createElement('section');
-        const linksTitle = document.createElement('h2');
-        linksTitle.textContent = 'Links';
-        const linkParagraph = document.createElement('p');
-        const link = document.createElement('a');
-        link.href = 'https://www.linkedin.com/in/ryota-abe-5a3592bb';
-        link.target = '_blank';
-        link.textContent = 'LinkedIn';
-        linkParagraph.textContent = 'Visit my LinkedIn profile: ';
-        linkParagraph.appendChild(link);
-        linksSection.appendChild(linksTitle);
-        linksSection.appendChild(linkParagraph);
-
-        // Contact Meセクション
-        const contactSection = document.createElement('section');
-        const contactTitle = document.createElement('h2');
-        contactTitle.textContent = 'Contact Me';
-        const button = document.createElement('button');
-        button.textContent = 'Get in Touch';
-        button.addEventListener('click', () => {
+        document.getElementById('contactBtn').addEventListener('click', () => {
             alert('Thank you for reaching out!');
         });
-        contactSection.appendChild(contactTitle);
-        contactSection.appendChild(button);
-
-        // 各セクションをmainに追加
-        main.appendChild(aboutSection);
-        main.appendChild(interestsSection);
-        main.appendChild(linksSection);
-        main.appendChild(contactSection);
-
-        // mainセクションをbodyに追加
-        document.body.appendChild(main);
-
-        // footerセクションを生成
-        const footer = document.createElement('footer');
-        const footerText = document.createElement('p');
-        footerText.textContent = '© 2024 My Sample Site. All rights reserved.';
-        footer.appendChild(footerText);
-        document.body.appendChild(footer);
     </script>
 </body>
 </html>
