@@ -16,3 +16,6 @@ build/
 
 # Server-side specific file (if not part of static deployment)
 server.js
+
+# Python virtual environment
+.venv/
