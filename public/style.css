@@ -1,16 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #7209b7;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --light-text-color: #ffffff;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #aadecd;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
 }
 
 header {
-    background-color: #005f73;
-    color: white;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text-color);
     padding: 80px 20px;
     text-align: center;
 }
@@ -19,23 +30,21 @@ header h1 {
     margin: 0;
     font-size: 3.5rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
 }
 
 header p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 300;
-    margin-top: 15px;
-    letter-spacing: 1px;
+    margin-top: 10px;
 }
 
 main {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    max-width: 850px;
+    margin: 40px auto;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px var(--shadow-color);
 }
 
 section {
@@ -43,58 +52,61 @@ section {
 }
 
 section h2 {
-    font-size: 2.5rem;
-    font-weight: 500;
+    font-size: 2.2rem;
+    font-weight: 700;
     margin-bottom: 20px;
-    color: #0a9396;
-    border-bottom: 3px solid #94d2bd;
-    padding-bottom: 10px;
+    color: var(--primary-color);
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding-left: 0;
 }
 
 ul li {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-ul li a {
-    color: #ee9b00;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
-button {
-    background-color: #ee9b00;
-    color: white;
-    border: none;
-    padding: 15px 30px;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
     font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #ca6702;
+ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.1rem;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #005f73;
-    color: white;
-    margin-top: 40px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    padding: 25px;
+    background-color: #343a40;
+    color: var(--light-text-color);
+    margin-top: 50px;
+    font-size: 1rem;
+}
+
+a.button-link, p > a, ul li a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.button-link:hover, p > a:hover, ul li a:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    transform: translateY(-2px);
 }
 
 /* Form Styles */
@@ -110,7 +122,7 @@ footer {
     display: block;
     font-size: 1.1rem;
     margin-bottom: 8px;
-    color: #005f73;
+    color: var(--primary-color);
     font-weight: 500;
 }
 
@@ -122,6 +134,23 @@ footer {
     border-radius: 5px;
     font-size: 1rem;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
 }
 
 #response-message {
@@ -154,6 +183,7 @@ footer {
 
     main {
         padding: 30px 20px;
+        margin: 20px auto;
     }
 
     button {
